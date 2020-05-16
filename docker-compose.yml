@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  ecommerce.api.customers:
+    image: ${DOCKER_REGISTRY-}ecommerceapicustomers
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Customers/Dockerfile
+    container_name: customers
+
+  ecommerce.api.customers_1:
+    image: ${DOCKER_REGISTRY-}ecommerceapicustomers
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Customers/Dockerfile
+    container_name: customers_1
+
+  ecommerce.api.orders:
+    image: ${DOCKER_REGISTRY-}ecommerceapiorders
+    build:
+      context: .
+      dockerfile: Ecommerce.Api.Orders/Dockerfile
+    container_name: orders
+
+  ecommerce.api.products:
+    image: ${DOCKER_REGISTRY-}ecommerceapiproducts
+    build:
+      context: .
+      dockerfile: Ecommerce.Api.Products/Dockerfile
+    container_name: products
+
+
+  ecommerce.api.search:
+    image: ${DOCKER_REGISTRY-}ecommerceapisearch
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Search/Dockerfile
+    container_name: search
+  consul:
+    image: consul:latest
+    command: consul agent -dev -log-level=warn -ui -client=0.0.0.0
+    hostname: consul
+    container_name: consul
+    
+  ecommerce.api.gateway:
+    image: ${DOCKER_REGISTRY-}ecommerceapigateway
+    build:
+      context: .
+      dockerfile: ECommerce.Api.Gateway/Dockerfile
+    container_name: apigateway

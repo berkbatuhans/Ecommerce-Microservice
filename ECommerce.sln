@@ -1,0 +1,59 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Api.Customers", "ECommerce.Api.Customers\ECommerce.Api.Customers.csproj", "{BDB2A438-B58A-40DE-B373-4BC319CB12B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Api.Orders", "Ecommerce.Api.Orders\Ecommerce.Api.Orders.csproj", "{262AA70E-CD90-4C7F-9E45-26A41DCAB590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Api.Products", "Ecommerce.Api.Products\Ecommerce.Api.Products.csproj", "{96BEB65A-BF16-47B1-945C-C0E18A25D33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Api.Search", "ECommerce.Api.Search\ECommerce.Api.Search.csproj", "{78769256-E2CD-47BC-BDCE-1E4C9EF1B2D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Api.Gateway", "ECommerce.Api.Gateway\ECommerce.Api.Gateway.csproj", "{4E8CFB82-C055-47BC-8A00-715903070C7D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4A1D4FD9-5AF6-4114-BB8A-2F681A1E1761}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{7E37C958-2A87-4C9A-8561-F6451F73A24C}"
+EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "ECommerce.Api.Products.Tests", "ECommerce.Api.Products.Tests\ECommerce.Api.Products.Tests.csproj", "{E25A25C6-EB12-42EF-A707-9DF451DC3D6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDB2A438-B58A-40DE-B373-4BC319CB12B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB2A438-B58A-40DE-B373-4BC319CB12B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB2A438-B58A-40DE-B373-4BC319CB12B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB2A438-B58A-40DE-B373-4BC319CB12B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262AA70E-CD90-4C7F-9E45-26A41DCAB590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262AA70E-CD90-4C7F-9E45-26A41DCAB590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262AA70E-CD90-4C7F-9E45-26A41DCAB590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262AA70E-CD90-4C7F-9E45-26A41DCAB590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BEB65A-BF16-47B1-945C-C0E18A25D33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BEB65A-BF16-47B1-945C-C0E18A25D33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BEB65A-BF16-47B1-945C-C0E18A25D33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BEB65A-BF16-47B1-945C-C0E18A25D33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78769256-E2CD-47BC-BDCE-1E4C9EF1B2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78769256-E2CD-47BC-BDCE-1E4C9EF1B2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78769256-E2CD-47BC-BDCE-1E4C9EF1B2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78769256-E2CD-47BC-BDCE-1E4C9EF1B2D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8CFB82-C055-47BC-8A00-715903070C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8CFB82-C055-47BC-8A00-715903070C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8CFB82-C055-47BC-8A00-715903070C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8CFB82-C055-47BC-8A00-715903070C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1D4FD9-5AF6-4114-BB8A-2F681A1E1761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1D4FD9-5AF6-4114-BB8A-2F681A1E1761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1D4FD9-5AF6-4114-BB8A-2F681A1E1761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1D4FD9-5AF6-4114-BB8A-2F681A1E1761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E37C958-2A87-4C9A-8561-F6451F73A24C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E37C958-2A87-4C9A-8561-F6451F73A24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E37C958-2A87-4C9A-8561-F6451F73A24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E37C958-2A87-4C9A-8561-F6451F73A24C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25A25C6-EB12-42EF-A707-9DF451DC3D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25A25C6-EB12-42EF-A707-9DF451DC3D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25A25C6-EB12-42EF-A707-9DF451DC3D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25A25C6-EB12-42EF-A707-9DF451DC3D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

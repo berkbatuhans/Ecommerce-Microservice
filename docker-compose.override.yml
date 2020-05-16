@@ -1,0 +1,61 @@
+version: '3.4'
+services:
+  ecommerce.api.customers:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Consul__Host=http://consul:8500
+      - ServiceConfig__serviceDiscoveryAddress=http://consul:8500
+      - ServiceConfig__serviceAddress=http://customers:80
+      - ServiceConfig__serviceName=customers
+      - ServiceConfig__serviceId=customers-v1
+    ports:
+      - "6002:80"
+  ecommerce.api.customers_1:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Consul__Host=http://consul:8500
+      - ServiceConfig__serviceDiscoveryAddress=http://consul:8500
+      - ServiceConfig__serviceAddress=http://customers-1:80
+      - ServiceConfig__serviceName=customers
+      - ServiceConfig__serviceId=customers_1-v1
+    ports:
+      - "6005:80"
+
+  ecommerce.api.orders:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ServiceConfig__serviceDiscoveryAddress=http://consul:8500
+      - ServiceConfig__serviceAddress=http://orders:80
+      - ServiceConfig__serviceName=orders
+      - ServiceConfig__serviceId=orders-v1
+    ports:
+      - "6003:80"
+
+
+  ecommerce.api.products:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "6001:80"
+
+  ecommerce.api.search:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "6004:80"
+    environment:
+      - Services__Products=http://ecommerce.api.products
+      - Services__Customers=http://ecommerce.api.customers
+      - Services__Orders=http://ecommerce.api.orders
+
+  consul:
+    ports:
+     - "8500:8500"
+
+
+  ecommerce.api.gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80:80"
+
